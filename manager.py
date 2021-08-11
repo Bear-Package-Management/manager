@@ -17,10 +17,10 @@ def version():
 	print(f"Current bpm version: {v}")
 
 def list():
-	dir = "/packages"
+	dir = "packages"
 	dirFound = os.path.isdir(dir)
 	if dirFound:
-		path = "/packages"
+		path = "packages"
 		packs = sum([len(folder) for r, d, folder in os.walk(path)])
 		print(f"There are currently {packs} installed.")
 	else:
