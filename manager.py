@@ -2,7 +2,7 @@
 # It will release soon.
 import os
 import sys
-v = "1.2.2"
+v = "1.2.3"
 
 def installPackage(p):
 	strP = str(p)
@@ -11,7 +11,7 @@ def installPackage(p):
 
 def removePackage(p):
 	print(f"Removing {p} from Bear-Shell System")
-	os.system(f'sudo rm -r {p}')
+	os.system(f'sudo rm -r packages/{p}')
 
 def version():
 	print(f"Current bpm version: {v}")
