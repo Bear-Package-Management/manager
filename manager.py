@@ -2,12 +2,12 @@
 # It will release soon.
 import os
 import sys
-v = "1.2.0"
+v = "1.2.1"
 
 def installPackage(p):
 	strP = str(p)
 	print(f"Installing package: {strP}")
-	os.system(f'git clone https://github.com/Bear-Package-Management/{p} /packages/{p}')
+	os.system(f'git clone https://github.com/Bear-Package-Management/{p} packages/{p}')
 
 def removePackage(p):
 	print(f"Removing {p} from Bear-Shell System")
