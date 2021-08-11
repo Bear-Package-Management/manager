@@ -2,7 +2,7 @@
 # It will release soon.
 import os
 import sys
-v = "1.2.1"
+v = "1.2.2"
 
 def installPackage(p):
 	strP = str(p)
