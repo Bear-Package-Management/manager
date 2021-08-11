@@ -2,12 +2,12 @@
 # It will release soon.
 import os
 import sys
-v = "1.1.0"
+v = "1.2.0"
 
 def installPackage(p):
 	strP = str(p)
 	print(f"Installing package: {strP}")
-	os.system(f'git clone https://github.com/Bear-Package-Management/{p} {p}')
+	os.system(f'git clone https://github.com/Bear-Package-Management/{p} /packages/{p}')
 
 def removePackage(p):
 	print(f"Removing {p} from Bear-Shell System")
@@ -15,3 +15,13 @@ def removePackage(p):
 
 def version():
 	print(f"Current bpm version: {v}")
+
+def list():
+	dir = "/packages"
+	dirFound = os.path.isdir(dir)
+	if dirFound:
+		path = "/packages"
+		packs = sum([len(folder) for r, d, folder in os.walk(path)])
+		print(f"There are currently {packs} installed.")
+	else:
+		print("No packages installed!")
